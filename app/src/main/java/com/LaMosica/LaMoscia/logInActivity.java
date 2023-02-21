@@ -22,6 +22,8 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
+import om.LaMosica.LaMoscia.databinding.ActivityLoginBinding;
+
 public class logInActivity extends AppCompatActivity
 {
     private ActivityLoginBinding binding;
@@ -176,7 +178,7 @@ public class logInActivity extends AppCompatActivity
                 pd.dismiss();
                 String phone = firebaseAuth.getCurrentUser().getPhoneNumber();
                 Toast.makeText(logInActivity.this,"Logged In as"+phone,Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(logInActivity.this, NavigateActivity.class);
+                Intent intent = new Intent(logInActivity.this, MusicActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
                 finish();
